@@ -1,0 +1,35 @@
+{
+  "name": "ts-car-example",
+  "version": "1.0.0",
+  "description": "A TypeScript car example demonstrating OOP concepts",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build-web": "webpack --mode production",
+    "build-web-dev": "webpack --mode development",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc --watch",
+    "serve": "webpack serve --mode development --open",
+    "build:web": "esbuild src/browser.ts --bundle --platform=browser --outfile=dist/bundle.js --minify",
+    "dev:web": "esbuild src/browser.ts --bundle --platform=browser --outfile=dist/bundle.js --watch"
+  },
+  "keywords": [
+    "typescript",
+    "car",
+    "oop",
+    "example"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0",
+    "ts-loader": "^9.4.0",
+    "esbuild": "^0.18.15"
+  }
+}

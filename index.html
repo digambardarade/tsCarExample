@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Car Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 TypeScript Car Example 🚗</h1>
+        
+        <!-- Regular Car Section -->
+        <div class="car-section">
+            <h2>🚙 Regular Car - Toyota Camry</h2>
+            <div class="car-info" id="regularCarInfo">
+                <span class="status-indicator status-stopped" id="regularStatus"></span>
+                <span>Status: Stopped</span>
+                <div>Speed: <span class="speed-display" id="regularSpeed">0</span> km/h</div>
+            </div>
+            <div class="controls">
+                <button onclick="startRegularCar()">Start Engine</button>
+                <button onclick="accelerateRegularCar()">Accelerate (+30)</button>
+                <button onclick="brakeRegularCar()">Brake (-20)</button>
+                <button onclick="honkRegularCar()">Honk</button>
+                <button onclick="stopRegularCar()">Stop Engine</button>
+            </div>
+            <div class="output" id="regularOutput">Ready to start the Toyota Camry...</div>
+        </div>
+
+        <!-- Sports Car Section -->
+        <div class="car-section">
+            <h2>🏎️ Sports Car - Ferrari F8 Tributo</h2>
+            <div class="car-info" id="sportsCarInfo">
+                <span class="status-indicator status-stopped" id="sportsStatus"></span>
+                <span>Status: Stopped</span> | <span>Turbo: Inactive</span>
+                <div>Speed: <span class="speed-display" id="sportsSpeed">0</span> km/h</div>
+            </div>
+            <div class="controls">
+                <button onclick="startSportsCar()">Start Engine</button>
+                <button onclick="accelerateSportsCar()" class="sports-btn">Accelerate (+50)</button>
+                <button onclick="activateTurbo()" class="sports-btn">Activate Turbo</button>
+                <button onclick="deactivateTurbo()" class="sports-btn">Deactivate Turbo</button>
+                <button onclick="brakeSportsCar()">Brake (-30)</button>
+                <button onclick="honkSportsCar()">Honk</button>
+                <button onclick="stopSportsCar()">Stop Engine</button>
+            </div>
+            <div class="output" id="sportsOutput">Ready to start the Ferrari F8 Tributo...</div>
+        </div>
+
+        <!-- Electric Car Section -->
+        <div class="car-section">
+            <h2>⚡ Electric Car - Tesla Model S</h2>
+            <div class="car-info" id="electricCarInfo">
+                <span class="status-indicator status-stopped" id="electricStatus"></span>
+                <span>Status: Stopped</span>
+                <div>Speed: <span class="speed-display" id="electricSpeed">0</span> km/h</div>
+                <div class="battery-display">Battery: <span id="batteryLevel">100.0</span>% | Range: <span id="rangeDisplay">400</span> km</div>
+            </div>
+            <div class="controls">
+                <button onclick="startElectricCar()" class="electric-btn">Power On</button>
+                <button onclick="accelerateElectricCar()" class="electric-btn">Accelerate (+40)</button>
+                <button onclick="brakeElectricCar()">Brake (-25)</button>
+                <button onclick="chargeElectricCar()" class="electric-btn">Charge (30 min)</button>
+                <button onclick="honkElectricCar()">Honk</button>
+                <button onclick="stopElectricCar()">Power Off</button>
+            </div>
+            <div class="output" id="electricOutput">Ready to power on the Tesla Model S...</div>
+        </div>
+
+        <!-- Demo Section -->
+        <div class="demo-section">
+            <h2>🛠️ Utility Functions Demo</h2>
+            <div class="controls">
+                <button onclick="runUtilityDemo()" style="background: white; color: #f39c12;">Run All Utilities</button>
+                <button onclick="clearUtilityResults()" style="background: #e74c3c;">Clear Results</button>
+            </div>
+            <div class="utility-results" id="utilityResults">Click "Run All Utilities" to see conversion and calculation examples...</div>
+        </div>
+
+        <!-- Polymorphism Demo -->
+        <div class="car-section">
+            <h2>🔄 Polymorphism Demo</h2>
+            <div class="controls">
+                <button onclick="runPolymorphismDemo()">Show All Cars Info</button>
+                <button onclick="clearPolymorphismResults()">Clear Results</button>
+            </div>
+            <div class="output" id="polymorphismOutput">Click "Show All Cars Info" to see polymorphism in action...</div>
+        </div>
+    </div>
+
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
