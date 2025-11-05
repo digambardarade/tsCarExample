@@ -12,7 +12,9 @@
     "watch": "tsc --watch",
     "serve": "webpack serve --mode development --open",
     "build:web": "esbuild src/browser.ts --bundle --platform=browser --outfile=dist/bundle.js --minify",
-    "dev:web": "esbuild src/browser.ts --bundle --platform=browser --outfile=dist/bundle.js --watch"
+    "dev:web": "esbuild src/browser.ts --bundle --platform=browser --outfile=dist/bundle.js --watch",
+    "deploy": "npm run build:web && vercel --prod",
+    "deploy:preview": "npm run build:web && vercel"
   },
   "keywords": [
     "typescript",
@@ -22,6 +24,11 @@
   ],
   "author": "Developer",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digambardarade/tsCarExample.git"
+  },
+  "homepage": "https://github.com/digambardarade/tsCarExample#readme",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "ts-node": "^10.9.0",

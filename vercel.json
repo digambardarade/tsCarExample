@@ -1,0 +1,27 @@
+{
+  "name": "ts-car-example",
+  "version": 2,
+  "buildCommand": "npm run build:web",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev:web",
+  "framework": null,
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/dist/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
